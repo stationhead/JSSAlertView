@@ -254,6 +254,8 @@ open class JSSAlertView: UIViewController {
 		alertBackgroundView = UIView()
 		alertBackgroundView.backgroundColor = baseColor
 		alertBackgroundView.layer.cornerRadius = 4
+		alertBackgroundView.layer.borderWidth = 1
+		alertBackgroundView.layer.borderColor = UIColor.white.cgColor
 		alertBackgroundView.layer.masksToBounds = true
 		containerView.addSubview(alertBackgroundView!)
 
