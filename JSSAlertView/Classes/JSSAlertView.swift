@@ -166,7 +166,7 @@ open class JSSAlertView: UIViewController {
 			var buttonWidth = alertWidth
 			if cancelButton != nil {
 				buttonWidth = alertWidth / 2
-				cancelButton.frame = CGRect(x: 0, y: yPos, width: buttonWidth - 0.5, height: buttonHeight)
+				cancelButton.frame = CGRect(x: 0, y: yPos, width: buttonWidth, height: buttonHeight)
 				if cancelButtonLabel != nil {
 					cancelButtonLabel.frame = CGRect(x: padding, y: (buttonHeight / 2) - 15, width: buttonWidth - (padding * 2), height: 30)
 				}
@@ -253,7 +253,7 @@ open class JSSAlertView: UIViewController {
 		// Background view/main color
 		alertBackgroundView = UIView()
 		alertBackgroundView.backgroundColor = baseColor
-		alertBackgroundView.layer.cornerRadius = 4
+		alertBackgroundView.layer.cornerRadius = 8
 		alertBackgroundView.layer.borderWidth = 1
 		alertBackgroundView.layer.borderColor = UIColor.white.cgColor
 		alertBackgroundView.layer.masksToBounds = true
@@ -304,6 +304,8 @@ open class JSSAlertView: UIViewController {
 		if !noButtons {
 			self.noButtons = false
 			dismissButton = UIButton()
+			dismissButton.layer.borderColor = UIColor.white.cgColor
+       			dismissButton.layer.borderWidth = 1.0
 			let buttonColor = UIImage.with(color: adjustBrightness(baseColor!, amount: 0.8))
 			let buttonHighlightColor = UIImage.with(color: adjustBrightness(baseColor!, amount: 0.9))
 			dismissButton.setBackgroundImage(buttonColor, for: .normal)
@@ -325,6 +327,8 @@ open class JSSAlertView: UIViewController {
 			// Second cancel button
 			if cancelButtonText != nil {
 				cancelButton = UIButton()
+				cancelButton.layer.borderColor = UIColor.white.cgColor
+        			cancelButton.layer.borderWidth = 1.0
 				let buttonColor = UIImage.with(color: adjustBrightness(baseColor!, amount: 0.8))
 				let buttonHighlightColor = UIImage.with(color: adjustBrightness(baseColor!, amount: 0.9))
 				cancelButton.setBackgroundImage(buttonColor, for: .normal)
