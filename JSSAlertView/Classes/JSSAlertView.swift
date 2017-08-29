@@ -411,7 +411,7 @@ open class JSSAlertView: UIViewController {
 	/// - Parameters:
 	///   - withCallback: callback availabel
 	///   - source: Type of removing view see ActionType
-	public func closeView(_ withCallback: Bool, source: ActionType = .close) {
+	func closeView(_ withCallback: Bool, source: ActionType = .close) {
 		UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.5, options: [], animations: {
 			self.containerView.center.y = self.view.center.y + self.viewHeight!
 			}, completion: { finished in
